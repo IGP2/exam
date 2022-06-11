@@ -25,6 +25,9 @@ echo'<head>';
         <img style="width: 300px; height: 300px; margin-right: 100px; margin-top: 70px; display:flex;" src= "./images/<?php echo $row['imagefile']?>" alt="<?php echo $row['imagefile']?>"
         <p> author: <?php echo $row['author'] ?></p> 
         <p> name: <?php echo $row['name'] ?></p><br>
+        <input type="submit" value = "more" form = "<?php echo $row['id'] ?>">
+        <form action = "./view.php" id = "<?php echo $row['id'] ?>" method = "GET"> 
+        <input type="hidden" name="id" value = "<?php echo $row['id'] ?>" form = "<?php echo $row['id'] ?>">
         <?php 
    echo  '</div> </div> </div> </div>';   
 
